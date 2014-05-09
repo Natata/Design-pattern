@@ -1,12 +1,11 @@
 package main
 
 import (
-    "Design-pattern/strategy/Hunter"
-    "Design-pattern/strategy/Hatsu"
+    "Design-pattern/strategy/Tool"
 )
 
 func main(){
-    gon := &hunter.Hunter{new(hatsu.Enhancer)}
+    gon := tool.WaterDivination("overflow")
     gon.Hatsu();
     gon.Ten();
 }
