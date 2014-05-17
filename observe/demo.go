@@ -1,10 +1,11 @@
 package main
 
 import (
-"fmt"
-"strconv"
+    "fmt"
+    "strconv"
 )
 
+//observable
 type subject struct {
     id       string
     observer map[string]*subscriber
@@ -16,16 +17,17 @@ func (s subject) register(o *subscriber) {
 
 func (s subject) update() {
     for k, _ := range s.observer {
-    s.observer[k].update()
-}
+        s.observer[k].update()
+    }
 }
 
 func (s subject) list() {
     for k, _ := range s.observer {
-    fmt.Println(s.observer[k])
-}
+        fmt.Println(s.observer[k])
+    }
 }
 
+//observer
 type subscriber struct {
     id    string
     value int
